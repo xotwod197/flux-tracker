@@ -1,3 +1,5 @@
+![Flux Dashboard](fluxdashboard.png)
+
 # Flux — Personal Task Tracker
 
 A self-hosted task and productivity tracker built for personal productivity, work projects, and everything in between. Runs locally on your PC, stores data in a folder of your choosing, auto-starts on login, and costs nothing to operate.
