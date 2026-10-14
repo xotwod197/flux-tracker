@@ -6,79 +6,78 @@
 <title>Flux · Personal Task Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f0f7f4;
-    --bg-elev: #f8fcfa;
-    --bg-sunken: #e4f0ea;
-    --border: #d4e6dd;
-    --border-strong: #bcd6ca;
-    --text: #1a1a1a;
-    --text-muted: #5f6b65;
-    --text-subtle: #93a39b;
-    --accent: #34c98f;
-    --accent-soft: #e0f5ec;
-    --success: #2d8a4e;
-    --warning: #c77700;
-    --danger: #c73e1d;
-    --danger-soft: #fce8e3;
-    --priority-high: #c73e1d;
-    --priority-med: #c77700;
-    --priority-low: #4a7c59;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
-    --shadow-lg: 0 20px 50px rgba(0,0,0,0.12);
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --font-display: 'Fraunces', Georgia, serif;
-    --font-body: 'JetBrains Mono', ui-monospace, monospace;
-    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-    --font-prose: 'Inter Tight', -apple-system, sans-serif;
-
-    /* terminal chrome */
-    --grid-line: rgba(0,0,0,0.028);
-    --rule-char: var(--border-strong);
+    /* iOS light system colors */
+    --bg: #F2F2F7;
+    --bg-elev: #FFFFFF;
+    --bg-sunken: #E9E9EE;
+    --border: #E5E5EA;
+    --border-strong: #D1D1D6;
+    --separator: rgba(60,60,67,0.14);
+    --text: #000000;
+    --text-muted: #6D6D72;
+    --text-subtle: #8E8E93;
+    --accent: #007AFF;
+    --accent-soft: #E5F1FF;
+    --success: #34C759;
+    --warning: #FF9500;
+    --danger: #FF3B30;
+    --danger-soft: #FFE5E3;
+    --priority-high: #FF3B30;
+    --priority-med: #FF9500;
+    --priority-low: #34C759;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05), 0 0 0 0.5px rgba(0,0,0,0.03);
+    --shadow-md: 0 6px 18px rgba(0,0,0,0.08);
+    --shadow-lg: 0 24px 60px rgba(0,0,0,0.16);
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --font-display: 'Plus Jakarta Sans', -apple-system, 'SF Pro Display', system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, 'SF Pro Text', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+    --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
     /* density scale - overridden by [data-density="compact"] */
-    --d-card-pad: 12px;
+    --d-card-pad: 14px;
     --d-row-pad: 14px;
-    --d-nav-pad: 8px;
-    --d-gap: 8px;
+    --d-nav-pad: 9px;
+    --d-gap: 10px;
     --d-font: 14px;
   }
 
   [data-density="compact"] {
-    --d-card-pad: 8px;
-    --d-row-pad: 8px;
-    --d-nav-pad: 5px;
-    --d-gap: 5px;
+    --d-card-pad: 10px;
+    --d-row-pad: 9px;
+    --d-nav-pad: 6px;
+    --d-gap: 6px;
     --d-font: 13px;
   }
 
   [data-theme="dark"] {
-    --bg: #0f0f0e;
-    --bg-elev: #1a1a18;
-    --bg-sunken: #08080a;
-    --border: #2a2a26;
-    --border-strong: #3a3a34;
-    --text: #f0efea;
-    --text-muted: #a5a39b;
-    --text-subtle: #6b6a62;
-    --accent: #4ade9f;
-    --accent-soft: #102a1f;
-    --grid-line: rgba(255,255,255,0.022);
-    --success: #5cb87a;
-    --warning: #e8a838;
-    --danger: #e85c3d;
-    --danger-soft: #2a1410;
-    --priority-high: #e85c3d;
-    --priority-med: #e8a838;
-    --priority-low: #7bb08a;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-    --shadow-lg: 0 20px 50px rgba(0,0,0,0.6);
+    /* iOS dark system colors */
+    --bg: #000000;
+    --bg-elev: #1C1C1E;
+    --bg-sunken: #2C2C2E;
+    --border: #38383A;
+    --border-strong: #48484A;
+    --separator: rgba(84,84,88,0.55);
+    --text: #FFFFFF;
+    --text-muted: #AEAEB2;
+    --text-subtle: #8E8E93;
+    --accent: #0A84FF;
+    --accent-soft: #0A2540;
+    --success: #30D158;
+    --warning: #FF9F0A;
+    --danger: #FF453A;
+    --danger-soft: #3A1512;
+    --priority-high: #FF453A;
+    --priority-med: #FF9F0A;
+    --priority-low: #30D158;
+    --shadow-sm: none;
+    --shadow-md: 0 6px 18px rgba(0,0,0,0.45);
+    --shadow-lg: 0 24px 60px rgba(0,0,0,0.7);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -101,140 +100,10 @@
   body {
     min-height: 100vh;
     background-color: var(--bg);
-    background-image:
-      radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--accent) 6%, transparent) 0%, transparent 40%),
-      radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--accent) 4%, transparent) 0%, transparent 50%),
-      repeating-linear-gradient(to right, var(--grid-line) 0 1px, transparent 1px 44px),
-      repeating-linear-gradient(to bottom, var(--grid-line) 0 1px, transparent 1px 44px);
-    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  /* ===== Terminal chrome ===== */
-  /* Bracketed counts: [12] instead of a pill */
-  .nav-count {
-    background: transparent !important;
-    padding: 0 !important;
-    color: var(--text-subtle);
-    font-weight: 500;
-  }
-  .nav-count::before { content: '['; opacity: 0.55; }
-  .nav-count::after  { content: ']'; opacity: 0.55; }
-  .nav-item.active .nav-count { color: var(--accent); }
-
-  /* Priority badges become [HIGH] / [MED] / [LOW] */
-  .badge {
-    background: transparent !important;
-    padding: 0 !important;
-    letter-spacing: 0.08em !important;
-    font-weight: 600;
-  }
-  .badge::before { content: '['; opacity: 0.5; }
-  .badge::after  { content: ']'; opacity: 0.5; }
-
-  /* Status pills become ·RUNNING· style tags */
-  .status-pill {
-    background: transparent !important;
-    padding: 0 !important;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 10px !important;
-  }
-
-  /* Section labels get a trailing rule that fills the row */
-  .nav-label > span:first-child,
-  .nav-label:not(:has(span)) { position: relative; }
-
-  /* ASCII rule helper */
-  .rule-fill {
-    flex: 1;
-    height: 1px;
-    background: repeating-linear-gradient(to right, var(--rule-char) 0 4px, transparent 4px 8px);
-    opacity: 0.5;
-    margin: 0 8px;
-  }
-
-  /* Progress rendered as [■■■■□□□□] */
-  .ascii-bar {
-    font-family: var(--font-mono);
-    letter-spacing: -0.5px;
-    color: var(--accent);
-    white-space: nowrap;
-  }
-  .ascii-bar .empty { color: var(--border-strong); }
-
-  /* Section labels read like code comments: // VIEWS */
-  .nav-label > span:first-child::before,
-  .nav-label:not(:has(> span))::before {
-    content: '// ';
-    color: var(--accent);
-    opacity: 0.7;
-  }
-
-  /* Sync line reads like a shell prompt */
-  .brand-tagline::before {
-    content: '$ ';
-    color: var(--accent);
-    font-weight: 700;
-  }
-  .brand-tagline #sync-status::after {
-    content: '_';
-    color: var(--accent);
-    animation: caretBlink 1.1s step-end infinite;
-  }
-  .app.sidebar-collapsed .brand-tagline::before { display: none; }
-
-  /* View subtitle as a comment */
-  .view-meta::before { content: '// '; color: var(--accent); opacity: 0.6; }
-
-  /* CRT scanlines over everything, very faint */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9000;
-    background: repeating-linear-gradient(
-      to bottom,
-      transparent 0 2px,
-      rgba(0,0,0,0.035) 2px 3px
-    );
-    mix-blend-mode: multiply;
-  }
-  [data-theme="dark"] body::after {
-    background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0,0,0,0.16) 2px 3px);
-    mix-blend-mode: normal;
-  }
-
-  /* ===== Boot sequence ===== */
-  #boot {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
-    background: #0b0b0a;
-    color: #4ade9f;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    padding: 40px 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    transition: opacity 0.35s ease;
-  }
-  #boot.fade { opacity: 0; pointer-events: none; }
-  #boot .boot-line { opacity: 0; animation: bootIn 0.12s forwards; white-space: pre; }
-  #boot .boot-line .ok   { color: #4ade9f; font-weight: 700; }
-  #boot .boot-line .dim  { color: #6b6a62; }
-  #boot .boot-line .warn { color: #e8a838; }
-  #boot .boot-logo {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 42px;
-    color: #f0efea;
-    margin-bottom: 14px;
-    letter-spacing: -0.02em;
-  }
-  #boot .boot-logo::after { content: '.'; color: #4ade9f; }
-  @keyframes bootIn { to { opacity: 1; } }
 
   button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
   input, textarea, select { font-family: inherit; color: inherit; }
@@ -2665,6 +2534,350 @@
     .search-box { display: none; }
     .cal-day { min-height: 60px; }
   }
+  /* ============================================================
+     iOS design layer — placed last so it wins the cascade
+     ============================================================ */
+
+  /* --- Frosted glass chrome --- */
+  .sidebar {
+    background: color-mix(in srgb, var(--bg-elev) 78%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    backdrop-filter: saturate(180%) blur(22px);
+    border-right: 0.5px solid var(--separator);
+  }
+  .topbar {
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    backdrop-filter: saturate(180%) blur(22px);
+    border-bottom: 0.5px solid var(--separator);
+    padding: 18px 32px;
+  }
+  .content { padding: 28px 32px 48px; }
+
+  /* --- Large Title typography --- */
+  .brand-logo {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-style: normal;
+    font-size: 26px;
+    letter-spacing: -0.03em;
+  }
+  .brand-logo::after { color: var(--accent); }
+  .brand-tagline {
+    font-family: var(--font-body);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .view-title {
+    font-family: var(--font-body);
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  .view-meta {
+    font-family: var(--font-body);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-subtle);
+  }
+
+  /* --- Sidebar: grouped, tinted selection --- */
+  .nav-section { padding: 0 12px 18px; }
+  .nav-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-subtle);
+    padding: 0 12px 6px;
+  }
+  .nav-item {
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 11px;
+  }
+  .nav-item:hover { background: var(--bg-sunken); }
+  .nav-item.active { background: var(--accent); color: #fff; font-weight: 600; }
+  .nav-item.active::before { display: none; }
+  .nav-item.active .nav-count { background: rgba(255,255,255,0.22); color: #fff; }
+  .nav-count {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--bg-sunken);
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .nav-add { border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .nav-add:hover { background: var(--accent); color: #fff; }
+
+  .tag-chip {
+    border-radius: 999px;
+    border: none;
+    background: var(--bg-sunken);
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+  .tag-chip:hover { background: var(--accent-soft); color: var(--accent); }
+  .tag-more {
+    border-radius: 999px;
+    border: none;
+    background: var(--accent-soft);
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+
+  .sidebar-footer { border-top: 0.5px solid var(--separator); }
+  .theme-toggle, .footer-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 7px 12px;
+  }
+  .sidebar-toggle { background: var(--accent); border-color: var(--bg-elev); }
+
+  /* --- Segmented controls (view switcher + density) --- */
+  .view-switcher, .density-toggle {
+    background: var(--bg-sunken);
+    border-radius: 9px;
+    padding: 2px;
+    gap: 0;
+  }
+  .view-btn, .density-btn {
+    font-family: var(--font-body);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 6px 14px;
+    color: var(--text-muted);
+  }
+  .density-btn { font-size: 11px; padding: 5px 10px; }
+  .view-btn.active, .density-btn.active {
+    background: var(--bg-elev);
+    color: var(--text);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 0 0 0.5px rgba(0,0,0,0.04);
+  }
+  [data-theme="dark"] .view-btn.active,
+  [data-theme="dark"] .density-btn.active { background: #636366; color: #fff; box-shadow: none; }
+
+  /* --- Buttons: pills --- */
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 35%, transparent); }
+  .btn-primary:active { transform: scale(0.97); }
+  .btn-secondary, .btn-danger, .detail-back, .cal-today-btn, .history-clear-btn, .pom-btn, .quick-status-btn, .archive-view-btn {
+    border-radius: 999px;
+    font-family: var(--font-body);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+  .btn-secondary { background: var(--bg-sunken); }
+  .quick-status-btn.active { background: var(--accent); color: #fff; }
+  .pom-btn.primary { background: var(--accent); }
+
+  /* --- Search --- */
+  .search-box input {
+    border-radius: 10px;
+    background: var(--bg-sunken);
+    border: none;
+    font-size: 14px;
+    padding: 9px 12px 9px 34px;
+  }
+  .search-box input:focus { background: var(--bg-elev); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+  .search-results { border-radius: 14px; border: none; }
+
+  /* --- Surfaces: borderless, soft shadow, generous radius --- */
+  .stat-card, .dashboard-section, .detail-panel, .detail-hero, .detail-edit-section,
+  .history-stat, .history-table, .history-toolbar, .list-table, .calendar-wrap,
+  .archive-year, .archive-calendar, .archive-month-detail-panel, .quick-add,
+  .time-by-project, .time-leaderboard, .pomodoro-widget, .modal, .history-empty-results {
+    border: none;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+  }
+  .modal { border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+  .pomodoro-widget { border-radius: 20px; box-shadow: var(--shadow-lg); }
+  .quick-add:focus-within { box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+  .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border: none; }
+  .stat-card::before, .stat-card::after { display: none; }
+
+  /* --- Dashboard type --- */
+  .stat-label, .history-stat-label, .detail-progress-label, .spark-label, .form-label,
+  .history-header, .list-header, .cal-weekday, .history-toolbar-label, .history-results-meta,
+  .pomodoro-label, .card-project, .detail-project, .timeline-entry-status, .status-bar-label {
+    font-family: var(--font-body);
+    letter-spacing: 0.04em;
+    font-weight: 700;
+  }
+  .stat-value, .history-stat-value, .pomodoro-time, .archive-cal-month-count,
+  .leaderboard-rank, .detail-title, .empty-state-title, .calendar-month,
+  .archive-year-title, .archive-month-title, .section-title, .detail-panel-title,
+  .modal-title, .empty-state-icon {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  .section-title, .detail-panel-title, .modal-title, .archive-month-title { font-weight: 700; letter-spacing: -0.01em; }
+  .stat-value .unit, .history-stat-value .unit { font-family: var(--font-body); font-weight: 500; }
+  .stat-trend, .card-meta, .card-tag, .date-cell, .history-title, .timeline-entry-time,
+  .timeline-duration, .status-bar-value, .leaderboard-meta, .archive-task-meta, .project-progress-count,
+  .quick-add-hint, .search-result-meta, .cal-day-number { font-family: var(--font-body); }
+  .empty-state-icon { font-size: 54px; opacity: 0.25; }
+
+  /* --- Kanban --- */
+  .column { background: var(--bg-sunken); border-radius: 18px; padding: 10px; }
+  [data-theme="dark"] .column { background: #141416; }
+  .column-header {
+    font-family: var(--font-body);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 8px 12px;
+  }
+  .column-hash, .rule-fill { display: none; }
+  .column-count {
+    margin-left: auto;
+    background: var(--bg-elev);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 999px;
+  }
+  [data-theme="dark"] .column-count { background: #2C2C2E; }
+  .card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s var(--spring), box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border: none; }
+  .card.dragging { transform: rotate(-2deg) scale(1.04); box-shadow: var(--shadow-lg); border: none; }
+  .card-priority-bar { width: 4px; border-radius: 14px 0 0 14px; }
+  .card-title { font-weight: 600; font-size: 14px; letter-spacing: -0.01em; }
+  .card-project { font-size: 10px; }
+  .card-tag { border-radius: 999px; padding: 2px 8px; }
+  .empty-column {
+    border: 2px dashed var(--border-strong);
+    border-radius: 14px;
+    font-family: var(--font-body);
+    opacity: 0.9;
+  }
+  .empty-column-icon { font-size: 30px; color: var(--text-subtle); letter-spacing: 0; opacity: 0.5; font-weight: 400; }
+  .empty-column-title { font-weight: 600; letter-spacing: 0; }
+  .empty-column-title::after { display: none; }
+  .empty-column-hint { letter-spacing: 0; }
+  .column-cards.drag-over { background: var(--accent-soft); }
+
+  /* --- Badges / pills --- */
+  .badge {
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    padding: 3px 9px;
+  }
+  .status-pill { border-radius: 999px; font-family: var(--font-body); font-weight: 600; font-size: 11px; text-transform: none; }
+  .list-check { border-width: 2px; }
+  .list-check.checked { background: var(--accent); border-color: var(--accent); }
+
+  /* --- Progress --- */
+  .progress-bar, .detail-progress-bar { border-radius: 999px; height: 6px; }
+  .detail-progress-bar { height: 10px; }
+  .progress-fill, .detail-progress-fill { border-radius: 999px; background: var(--accent); }
+  .ascii-bar { display: none; }
+
+  /* --- Forms / modals (sheet-style) --- */
+  .form-input, .form-select, .form-textarea, .tag-input-wrap, .history-toolbar-select, .history-toolbar-search {
+    border: none;
+    background: var(--bg-sunken);
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus, .tag-input-wrap:focus-within,
+  .history-toolbar-select:focus, .history-toolbar-search:focus {
+    border: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+  .form-label { text-transform: none; letter-spacing: 0; font-size: 12px; }
+  .modal-header, .modal-footer { border-color: var(--separator); }
+  .modal-close { border-radius: 999px; }
+  .subtask-item { border-radius: 10px; }
+  .subtask-check { border-radius: 6px; }
+  .tag-pill { border-radius: 999px; }
+  .modal-backdrop { background: rgba(0,0,0,0.35); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .modal { animation: sheetIn 0.42s var(--spring); }
+  @keyframes sheetIn { from { opacity: 0; transform: translateY(28px) scale(0.96); } to { opacity: 1; transform: none; } }
+
+  /* --- Lists / tables --- */
+  .list-row { border-bottom: 0.5px solid var(--separator); }
+  .list-header, .history-header { background: transparent; }
+  .history-row { border-bottom: 0.5px solid var(--separator); }
+  .focus-item { border-radius: 12px; }
+  .archive-year-header, .archive-month-header { border-radius: 12px; }
+  .cal-day { border-color: var(--separator); }
+  .cal-day.today { background: var(--accent-soft); }
+  .cal-task { border-radius: 6px; }
+  .toast { border-radius: 999px; padding: 12px 22px; }
+  .pagination-btn { border: none; background: var(--bg-elev); box-shadow: var(--shadow-sm); }
+
+  /* --- Spring motion --- */
+  @keyframes cardSettle {
+    0%   { transform: translateY(-10px) scale(1.05); }
+    55%  { transform: translateY(2px) scale(0.985); }
+    80%  { transform: translateY(-1px) scale(1.005); }
+    100% { transform: none; }
+  }
+  .card.settling { animation: cardSettle 0.5s var(--spring); }
+  .nav-item, .view-btn, .density-btn, .btn-primary, .quick-status-btn { transition: all 0.22s var(--spring); }
+
+  /* --- Splash screen --- */
+  #boot {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  #boot.fade { opacity: 0; transform: scale(1.04); pointer-events: none; }
+  #boot .boot-line { display: none; }
+  #boot .boot-logo {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-style: normal;
+    font-size: 64px;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    animation: splashIn 0.65s var(--spring);
+  }
+  #boot .boot-logo::after { content: '.'; color: var(--accent); }
+  @keyframes splashIn { from { opacity: 0; transform: scale(0.82); } to { opacity: 1; transform: none; } }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .view-title { font-size: 24px; }
+    .topbar { padding: 14px 18px; }
+  }
 </style>
 </head>
 <body data-theme="light">
@@ -3012,14 +3225,14 @@
 // =================== CONFIG ===================
 const API_BASE = '';  // same origin
 const STORAGE_KEY = 'flux-tracker-v2';
-const PROJECT_COLORS = ['#34c98f', '#2d8a4e', '#2b6cb0', '#9f1239', '#7e22ce', '#ca8a04', '#0891b2', '#475569'];
+const PROJECT_COLORS = ['#007AFF', '#34C759', '#FF9500', '#FF3B30', '#AF52DE', '#FF2D55', '#5AC8FA', '#8E8E93'];
 const WEEK_START = 1; // Monday
 
 // =================== STATE ===================
 let state = {
   projects: [
-    { id: 'p1', name: 'Personal', color: '#34c98f' },
-    { id: 'p2', name: 'Work', color: '#2b6cb0' }
+    { id: 'p1', name: 'Personal', color: '#007AFF' },
+    { id: 'p2', name: 'Work', color: '#AF52DE' }
   ],
   tasks: [],
   theme: 'light'
@@ -3872,7 +4085,7 @@ function renderDashboard() {
       <div class="stat-card tile-lg" data-stat-view="completed-history">
         <div class="stat-label">Completion Rate</div>
         <div class="stat-value" data-countup="${completion}">${completion}<span class="unit">%</span></div>
-        <div class="ascii-bar" style="margin-top:6px;">${asciiBar(completion)}</div>
+        <div class="progress-bar" style="margin-top:10px;"><div class="progress-fill" style="width:${completion}%"></div></div>
         <div class="spark-wrap">
           ${sparkline(completedSeries)}
           <span class="spark-label">completed / 14d</span>
@@ -4029,12 +4242,12 @@ function runCountUps() {
 function renderKanban() {
   const tasks = filteredTasks();
   const cols = [
-    { id: 'todo', label: 'To Do', cls: 'col-todo', glyph: '○',
-      emptyIcon: '[ ]', emptyTitle: 'queue empty', emptyHint: 'press N or use quick add' },
-    { id: 'progress', label: 'In Progress', cls: 'col-progress', glyph: '◐',
-      emptyIcon: '[~]', emptyTitle: 'nothing running', emptyHint: 'drag a task here to start' },
-    { id: 'done', label: 'Done', cls: 'col-done', glyph: '●',
-      emptyIcon: '[✓]', emptyTitle: 'no completions yet', emptyHint: 'finished work lands here' }
+    { id: 'todo', label: 'To Do', cls: 'col-todo',
+      emptyIcon: '○', emptyTitle: 'Nothing queued', emptyHint: 'Press N or use quick add' },
+    { id: 'progress', label: 'In Progress', cls: 'col-progress',
+      emptyIcon: '◐', emptyTitle: 'Nothing in motion', emptyHint: 'Drag a task here to start it' },
+    { id: 'done', label: 'Done', cls: 'col-done',
+      emptyIcon: '✓', emptyTitle: 'No completions yet', emptyHint: 'Finished work lands here' }
   ];
 
   return `
@@ -4052,11 +4265,9 @@ function renderKanban() {
         return `
           <div class="column ${c.cls}">
             <div class="column-header">
-              <span class="column-hash">##</span>
               <span class="column-dot"></span>
               <span>${c.label}</span>
-              <span class="rule-fill"></span>
-              <span class="column-count">[${String(colTasks.length).padStart(2, '0')}]</span>
+              <span class="column-count">${colTasks.length}</span>
             </div>
             <div class="column-cards" data-status="${c.id}">
               ${colTasks.length === 0 ? `
@@ -6031,31 +6242,22 @@ function bootLine(html, delay) {
 }
 
 async function init() {
+  // Apply the saved theme before the splash is visible so it doesn't flash the wrong color
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    if (saved.theme) document.body.dataset.theme = saved.theme;
+  } catch (e) {}
+
   const bootStart = performance.now();
-  bootLine('<span class="dim">flux v2 · personal os</span>', 0);
-  bootLine('> probing backend on <span class="dim">localhost:7789</span> ...', 90);
-
   await detectBackend();
-  bootLine(useNetworkBackend
-    ? '  backend <span class="ok">[OK]</span>  data folder reachable'
-    : '  backend <span class="warn">[LOCAL]</span>  using browser storage', 180);
-
-  bootLine('> loading flux-data.json ...', 260);
   await loadState();
-  const nActive = state.tasks.filter(t => !t.archived && t.status !== 'done').length;
-  const nDone   = state.tasks.filter(t => t.status === 'done' && !t.archived).length;
-  const nArch   = state.tasks.filter(t => t.archived).length;
-  bootLine(`  tasks <span class="ok">[OK]</span>  ${nActive} active · ${nDone} done · ${nArch} archived · ${state.projects.length} projects`, 340);
-  bootLine('> initializing views ...', 420);
-  bootLine('  dashboard <span class="ok">[OK]</span>  kanban <span class="ok">[OK]</span>  calendar <span class="ok">[OK]</span>  insights <span class="ok">[OK]</span>', 500);
-  bootLine('<span class="ok">ready_</span>', 600);
 
-  // Hold the boot screen just long enough to read, then fade. Skip entirely on reduced motion.
-  const minBoot = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1050;
+  // Splash: hold just long enough for the logo to land, then dissolve into the app
+  const minBoot = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 720;
   const elapsed = performance.now() - bootStart;
   setTimeout(() => {
     const b = document.getElementById('boot');
-    if (b) { b.classList.add('fade'); setTimeout(() => b.remove(), 400); }
+    if (b) { b.classList.add('fade'); setTimeout(() => b.remove(), 450); }
   }, Math.max(0, minBoot - elapsed));
   autoArchive();
   saveState();
