@@ -8,6 +8,39 @@ A self-hosted task and productivity tracker built for personal productivity, wor
 
 ---
 
+## Screenshots
+
+Demo data, macOS-style redesign (October 2026). Click any image for full size.
+
+| Dashboard | Kanban |
+|:--:|:--:|
+| [![Dashboard](screenshots/01-dashboard-light.png)](screenshots/01-dashboard-light.png) | [![Kanban](screenshots/02-kanban.png)](screenshots/02-kanban.png) |
+
+| List | Calendar |
+|:--:|:--:|
+| [![List](screenshots/03-list.png)](screenshots/03-list.png) | [![Calendar](screenshots/04-calendar.png)](screenshots/04-calendar.png) |
+
+| Task detail | Completion history |
+|:--:|:--:|
+| [![Task detail](screenshots/05-task-detail.png)](screenshots/05-task-detail.png) | [![Completion history](screenshots/06-completion-history.png)](screenshots/06-completion-history.png) |
+
+| New task sheet | Pomodoro timer |
+|:--:|:--:|
+| [![New task](screenshots/07-new-task-sheet.png)](screenshots/07-new-task-sheet.png) | [![Pomodoro](screenshots/08-pomodoro.png)](screenshots/08-pomodoro.png) |
+
+| Dark mode | Kanban, dark |
+|:--:|:--:|
+| [![Dashboard dark](screenshots/09-dashboard-dark.png)](screenshots/09-dashboard-dark.png) | [![Kanban dark](screenshots/10-kanban-dark.png)](screenshots/10-kanban-dark.png) |
+
+<details>
+<summary>Collapsed sidebar</summary>
+
+[![Collapsed sidebar](screenshots/11-collapsed-sidebar-dark.png)](screenshots/11-collapsed-sidebar-dark.png)
+
+</details>
+
+---
+
 ## What You'll Need
 
 - **Windows 10 or 11** (uses built-in PowerShell and Task Scheduler)
